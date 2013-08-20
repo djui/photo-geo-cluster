@@ -1,0 +1,31 @@
+* {
+    -webkit-user-select: none;
+}
+
+html {
+    overflow: hidden;
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+#map {
+    height: 100vh;
+    width: 100vw;
+}
+
+#dropzone {
+}
+
+#dropzone.hover {
+    color: #f00;
+    border-color: #f00;
+    border-style: solid;
+    box-shadow: inset 0 3px 4px #888;
+}

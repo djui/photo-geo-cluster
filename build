@@ -1,0 +1,28 @@
+#!/usr/bin/env bash -e
+
+APP_NAME=PhotoGeoClusterer.app
+
+
+# Prefetch Node-Webkit
+if [ ! -d $APP_NAME ] ; then
+    wget https://s3.amazonaws.com/node-webkit/v0.7.1/node-webkit-v0.7.1-osx-ia32.zip
+    unzip node-webkit-v0.7.1-osx-ia32.zip
+    rm node-webkit-v0.7.1-osx-ia32.zip
+    rm nwsnapshot
+    mv node-webkit.app $APP_NAME
+fi
+
+# Cleanup
+rm -rf bin
+
+# Build
+pushd src > /dev/null
+zip ../app.nw * > /dev/null
+popd > /dev/null
+
+# Package
+mkdir bin
+cp -r $APP_NAME bin
+cp Info.plist bin/$APP_NAME/Contents
+cp app.icns bin/$APP_NAME/Contents/Resources
+mv app.nw bin/$APP_NAME/Contents/Resources

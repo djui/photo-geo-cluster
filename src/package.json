@@ -1,0 +1,12 @@
+{
+  "name": "PhotoGeoClusterer",
+  "description": "Cluster photos into folders by their geo location",
+  "version": "1.0",
+  "main": "index.html",
+  "window": {
+    "min_height": 400,
+    "min_width": 400,
+    "toolbar": true,
+    "show": true
+  }
+}
