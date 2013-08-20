@@ -17,7 +17,7 @@ rm -rf bin
 
 # Build
 pushd src > /dev/null
-zip ../app.nw * > /dev/null
+zip -r ../app.nw * > /dev/null
 popd > /dev/null
 
 # Package

@@ -6,7 +6,7 @@
   "window": {
     "min_height": 400,
     "min_width": 400,
-    "toolbar": true,
-    "show": true
+    "toolbar": false,
+    "show": false
   }
 }
