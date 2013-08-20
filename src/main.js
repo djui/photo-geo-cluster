@@ -71,9 +71,9 @@ function fileSelectHandler(e) {
   counter += files.length;
   
   for (var i = 0, file; file = files[i]; i++) {
-    fileHead = file.slice(0, 131072);
+    // fileHead = file.slice(0, 131072);
     
-    geotag(fileHead, function(err, geo_data) {
+    geotag(file, function(err, geo_data) {
       console.log(--counter);
       
       if (err)
